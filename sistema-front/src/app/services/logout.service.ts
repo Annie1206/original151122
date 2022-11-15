@@ -14,11 +14,6 @@ export class UsuariosService {
 
   constructor(private http:HttpClient) { }
 
-  // loginByEmail(form:loginI):Observable<ResponseI>{
-  // let direccion = this.url + "usuario";
-  // return this.http.post<ResponseI>(direccion,form);
-
-  // }
   logout(){
    
 

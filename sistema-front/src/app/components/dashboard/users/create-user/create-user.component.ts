@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import {FijosServices} from '../../../../services/fijo.service';
+import {EmpleadoslcServices} from '../../../../services/fijo.service';
 
 @Component({
   selector: 'app-create-user',
@@ -9,9 +9,9 @@ import {FijosServices} from '../../../../services/fijo.service';
 })
 export class CreateUserComponent implements OnInit {
 
-  listRoles: any[] = ['Administrador', 'Gerente Administración', 'Analista Administración', 'Gerente Contabilidad', 'Analista Contabilidad'];
+  listRoles: any[] = ['Director', 'Gerente Administración', 'Analista Administración', 'Gerente Contabilidad', 'Analista Contabilidad'];
 
-  constructor() { }
+  constructor() { } 
 
   ngOnInit(): void {
   }

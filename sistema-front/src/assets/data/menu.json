@@ -1,7 +1,8 @@
 [
     {
         "nombre": "Inicio",
-        "redirect": "/dashboard"
+        "redirect": "/dashboard",
+        "icono": "fa-home"
     },
     {
         "nombre": "Usuarios",
@@ -10,5 +11,10 @@
     {
         "nombre": "Reportes",
         "redirect": "/dashboard/reports"
+    },
+    {
+        "nombre": "Configuración",
+        "redirect": "/dashboard/configuracion"
     }
 ]
+

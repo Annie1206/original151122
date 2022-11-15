@@ -1,4 +1,5 @@
 export interface Menu {
     nombre: string,
-    redirect: string
+    redirect: string,
+    icono: string
 }

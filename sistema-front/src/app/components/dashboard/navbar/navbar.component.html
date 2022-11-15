@@ -1,11 +1,13 @@
 <mat-toolbar class="toolbar">
-  <a class="navbar-item">
-    <img  class="logo" src="assets/img/Logo.png" >
-  </a>
+      <span class="example-spacer"></span>
+    <!--<button mat-button *ngFor="let item of menu" [routerLink] = 'item.redirect'>{{item.icono}} {{item.nombre}}</button>-->
+    <button mat-button routerLink = '/dashboard'><mat-icon>home</mat-icon> Inicio </button>
+    <button mat-button routerLink = '/dashboard/users'><mat-icon>supervisor_account</mat-icon> Usuarios </button>
+    <button mat-button routerLink = '/dashboard/reports'><mat-icon>print</mat-icon> Reportes </button>
+    <button mat-button routerLink = '/dashboard/configuracion'><mat-icon>settings</mat-icon> Configuración </button>
     <span class="example-spacer"></span>
-    <button mat-button *ngFor="let item of menu" [routerLink] = 'item.redirect'>{{item.nombre}}</button>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        
         <mat-icon routerLink="/login">logout</mat-icon>
     </button>
 </mat-toolbar>

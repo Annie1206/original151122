@@ -7,9 +7,14 @@ import { CreateRoleComponent } from './users/create-role/create-role.component';
 import { CreateUserComponent } from './users/create-user/create-user.component';
 import { UsersComponent } from './users/users.component';
 import { FreeComponent } from './freelance/freelance.component';
-import { ContratadoComponent } from './contratado/contratado.component';
+import { configuracionComponent } from './configuracion/configuracion.component';
 import { FijoComponent } from './fijo/fijo.component';
 import { CrearUsuarioComponent } from './fijo/crear-usuario/crear-usuario.component';
+import { TasaComponent } from './tasa/tasa.component';
+import { PdfComponent } from './pdf/pdf.component';
+import { BeneficiosComponent } from './beneficios/beneficios.component';
+import { VistaPrestacionesComponent } from './vista-prestaciones/vista-prestaciones.component';
+
 
 const routes: Routes = [
   { path: '', component: DashboardComponent, children:[
@@ -19,9 +24,13 @@ const routes: Routes = [
     { path: 'create-role', component: CreateRoleComponent},
     { path: 'reports', component: ReportsComponent},
     { path: 'freelance', component: FreeComponent},
-    { path: 'contratado', component: ContratadoComponent},
+    { path: 'configuracion', component: configuracionComponent},
     { path: 'fijo', component: FijoComponent},
     { path: 'crear-usuario', component: CrearUsuarioComponent},
+    { path: 'tasa', component: TasaComponent},
+    { path: 'pdf', component: PdfComponent},
+    { path: 'beneficios', component: BeneficiosComponent},
+    { path: 'vista-prestaciones', component: VistaPrestacionesComponent},
 
   ]}
 ];

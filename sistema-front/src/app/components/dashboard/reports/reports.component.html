@@ -1,5 +1,28 @@
-<div class="container">
-    <mat-toolbar>
-        <span>Reportes</span>
-    </mat-toolbar>
+<div class="inicio">
+  <div>
+    <table>
+      <tr>
+        <td><img class="logolc" src="assets/img/Logo.png" ></td>
+        <td>
+          <p class="title">
+            Sistema de Administración <br>
+            Unidad Educativa "La Ciencia"
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <img class="imagen" src="/assets/img/fondo.jpg">
+    <div class="container">
+            <button mat-raised-button class="card1" routerLink="/dashboard/fijo"> Consultar proyecciones </button>
+            <button mat-raised-button class="card1" routerLink="/dashboard/freelance"> Consultar liquidaciones realizadas </button>
+    </div>
+  </div>
 </div>
+
+  <!--Para llamar a la página de pdf-->
+  <div>
+    <button mat-raised-button routerLink="/dashboard/pdf"> Importar PDF </button>
+  </div>

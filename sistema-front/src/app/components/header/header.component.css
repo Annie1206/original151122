@@ -1,6 +1,6 @@
 .logo{
   position: absolute;
-  height:3em ;
+  height:15em ;
   top: 2em;
   left: 1em;
 
@@ -12,3 +12,11 @@
     height: 5 em;
   }
 
+.head{
+  position:absolute;
+  margin-left: 9.5em;
+  margin-top: 4em;
+  color: #005e85;
+  font-size: 19pt;
+  align-items: center;
+}

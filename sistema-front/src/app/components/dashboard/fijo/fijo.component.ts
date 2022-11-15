@@ -4,10 +4,11 @@ import { MatSort } from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import {FijosServices} from '../../../services/fijo.service';
+import {EmpleadoslcServices} from '../../../services/fijo.service';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { EditComponent } from '../edit/edit.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fijo',
@@ -18,21 +19,22 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 export class FijoComponent  {
   fijo: any[] = [];
   dataSource = new MatTableDataSource(this.fijo);
-  displayedColumns: string[] = [ 'id','name', 'last_name', 'CI','id_department','num','date','eliminar', 'editar'];
+  displayedColumns: string[] = [ 'CI','name', 'last_name', 'position','address','num','date', 'salariobase', 'editar'];
 
-@ViewChild(MatPaginator) paginator!: MatPaginator;  
+@ViewChild(MatPaginator) paginator!: MatPaginator;
 @ViewChild(MatSort) sort!: MatSort;
 
-constructor(private service: FijosServices,
+constructor(private service: EmpleadoslcServices,
             public dialog: MatDialog,
+            private rutas: Router,
             ) {}
             //public dialog: MatDialog ){}
 
 ngOnInit(): void {
-  
+
   this.cargarData();
  // this.dataSource.paginator = this.paginator;
- 
+
 }
 
 ngAfterViewInit() {
@@ -54,13 +56,16 @@ cargarData(){
   });
 }
 
-editar(id:string): void{
+editar(empleados:any): void{
   const dialogRef = this.dialog.open(EditComponent, {
-   data:{ id: id }
+   data: empleados
   });
-  console.log(id)
+  console.log(empleados);
   dialogRef.afterClosed().subscribe(result => {
     console.log('The dialog was closed');
+    this.rutas.navigateByUrl('/', {skipLocationChange: true}).then (() => {
+      this.rutas.navigate(['/dashboard/fijo'])
+    })
   });
 
 }

@@ -1,0 +1,92 @@
+<mat-toolbar>
+  <span>Módulo Empleados - Unidad Educativa "La Ciencia"</span>
+  <div class="space"></div>
+
+</mat-toolbar>
+
+<div class="container">
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="datefin">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let element"> {{element.datefin}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="salario_basico_mensual">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> SBM </th>
+        <td mat-cell *matCellDef="let element"> Bs. {{element.salario_basico_mensual}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="salario_basico_diario">
+       <th mat-header-cell *matHeaderCellDef> SBD </th>
+       <td mat-cell *matCellDef="let element"> Bs. {{element.salario_basico_diario}} </td>
+      </ng-container>
+
+       <!-- Weight Column -->
+       <ng-container matColumnDef="utilidades_diario">
+        <th mat-header-cell *matHeaderCellDef> UD </th>
+        <td mat-cell *matCellDef="let element"> Bs. {{element.utilidades_diario}} </td>
+      </ng-container>
+
+       <!-- Weight Column -->
+       <ng-container matColumnDef="bono_vacional_diario">
+        <th mat-header-cell *matHeaderCellDef> BVD </th>
+        <td mat-cell *matCellDef="let element"> Bs. {{element.bono_vacional_diario}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="salario_integral_diario">
+        <th mat-header-cell *matHeaderCellDef> SID </th>
+        <td mat-cell *matCellDef="let element"> Bs. {{element.salario_integral_diario}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="dias_prestaciones">
+       <th mat-header-cell *matHeaderCellDef> DP </th>
+       <td mat-cell *matCellDef="let element"> {{element.dias_prestaciones}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+       <ng-container matColumnDef="apartado_mensual">
+        <th mat-header-cell *matHeaderCellDef> AM </th>
+        <td mat-cell *matCellDef="let element"> Bs. {{element.apartado_mensual}} </td>
+       </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="acumulado">
+        <th mat-header-cell *matHeaderCellDef> Acumulado </th>
+        <td mat-cell *matCellDef="let element"> Bs. {{element.acumulado}} </td>
+       </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="tasa">
+        <th mat-header-cell *matHeaderCellDef> Tasa (%) </th>
+        <td mat-cell *matCellDef="let element"> {{element.tasa}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="intereses_prestaciones">
+        <th mat-header-cell *matHeaderCellDef> IP </th>
+        <td mat-cell *matCellDef="let element"> Bs. {{element.intereses_prestaciones}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+
+  <div>
+    <li>
+      SBM = Salario Básico Mensual
+      SBD = Salario Basico Diario
+    </li>
+
+  </div>

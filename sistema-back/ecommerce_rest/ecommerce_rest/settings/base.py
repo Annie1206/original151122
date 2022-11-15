@@ -37,8 +37,8 @@ LOCAL_APPS = [
     'apps.department',
     'apps.historical',
     'apps.hired',
-    'apps.fijos',
-
+    'apps.empleadoslc',
+    'apps.beneficios',
 
 ]
 

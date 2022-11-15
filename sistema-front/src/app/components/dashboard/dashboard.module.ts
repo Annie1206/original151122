@@ -12,7 +12,7 @@ import { CreateUserComponent } from './users/create-user/create-user.component';
 import { CreateRoleComponent } from './users/create-role/create-role.component';
 import { NavComponent } from './nav/nav.component';
 import { FreeComponent } from './freelance/freelance.component';
-import { ContratadoComponent } from './contratado/contratado.component';
+import { configuracionComponent } from './configuracion/configuracion.component';
 import { FijoComponent } from './fijo/fijo.component';
 import { EditComponent } from './edit/edit.component';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -23,6 +23,12 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSortModule} from '@angular/material/sort';
 import { CrearUsuarioComponent } from './fijo/crear-usuario/crear-usuario.component';
 import {MatSelectModule} from '@angular/material/select';
+import { TasaComponent } from './tasa/tasa.component';
+import { PdfComponent } from './pdf/pdf.component';
+import { AumentoComponent } from './aumento/aumento.component';
+import { BeneficiosComponent } from './beneficios/beneficios.component';
+import { VistaPrestacionesComponent } from './vista-prestaciones/vista-prestaciones.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,11 +42,15 @@ import {MatSelectModule} from '@angular/material/select';
     CreateRoleComponent,
     NavComponent,
     FreeComponent,
-    ContratadoComponent,
+    configuracionComponent,
     FijoComponent,
     EditComponent,
     CrearUsuarioComponent,
-    
+    TasaComponent,
+    PdfComponent,
+    AumentoComponent,
+    BeneficiosComponent,
+    VistaPrestacionesComponent,
   ],
   imports: [
     CommonModule,
@@ -48,12 +58,15 @@ import {MatSelectModule} from '@angular/material/select';
     SharedModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatPaginatorModule, 
-    MatTooltipModule, 
+    MatPaginatorModule,
+    MatTooltipModule,
     MatSortModule,
     MatSelectModule,
+    FormsModule,
 
-    
+    //AngularFontAwesomeModule,
+
+
   ]
 })
 export class DashboardModule { }
